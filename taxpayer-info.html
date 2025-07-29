@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxpayer Information - E-Tax</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <style>
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
+  <nav class="bg-blue-900 text-white shadow">
+    <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <span class="font-bold text-xl tracking-wide">E-Tax for SIGTAS</span>
+        <a href="taxpayer-home.html" class="hover:underline">Home</a>
+        <a href="taxpayer-declarations.html" class="hover:underline">Tax Declarations</a>
+        <a href="taxpayer-info.html" class="hover:underline font-bold">Taxpayer Info</a>
+        <a href="taxpayer-messages.html" class="hover:underline">Message Centre</a>
+        <a href="taxpayer-services.html" class="hover:underline">Taxpayer Services</a>
+        <a href="taxpayer-password.html" class="hover:underline">Change Password</a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>English</option>
+          <option>Amharic</option>
+          <option>Other</option>
+        </select>
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>Gregorian</option>
+          <option>Ethiopian</option>
+        </select>
+        <a href="login.html" class="ml-4 bg-red-600 hover:bg-red-700 px-3 py-1 rounded">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-1 container mx-auto px-4 py-8 fade-in">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="avatar">
+        <div class="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="https://api.dicebear.com/7.x/miniavs/svg?seed=Abebe" alt="User Avatar" />
+        </div>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" /></svg>Taxpayer Information</h2>
+        <div class="badge badge-primary badge-lg mt-2">TIN: 1001234567</div>
+      </div>
+    </div>
+    <div class="card bg-white shadow-xl max-w-xl mx-auto">
+      <div class="card-body">
+        <form>
+          <div class="form-control mb-4">
+            <label class="label font-semibold">Name</label>
+            <input type="text" class="input input-bordered w-full" value="Abebe Kebede" />
+          </div>
+          <div class="form-control mb-4">
+            <label class="label font-semibold">Email</label>
+            <input type="email" class="input input-bordered w-full" value="abebe@example.com" />
+          </div>
+          <div class="form-control mb-4">
+            <label class="label font-semibold">Phone</label>
+            <input type="tel" class="input input-bordered w-full" value="+251912345678" />
+          </div>
+          <div class="form-control mb-4">
+            <label class="label font-semibold">Address</label>
+            <input type="text" class="input input-bordered w-full" value="Addis Ababa, Ethiopia" />
+          </div>
+          <div class="flex gap-4 mt-6">
+            <button type="button" class="btn btn-primary w-1/2 transition-all duration-200 hover:scale-105">Save</button>
+            <button type="button" class="btn btn-outline w-1/2 transition-all duration-200 hover:scale-105">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+    <div class="container mx-auto">
+      &copy; 2024 Ethiopian Revenues and Customs Authority. E-Tax Module for SIGTAS Demo UI.
+    </div>
+  </footer>
+</body>
+</html> 

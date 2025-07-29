@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Tax Officers - E-Tax</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <style>
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
+  <nav class="bg-blue-900 text-white shadow">
+    <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <span class="font-bold text-xl tracking-wide">E-Tax for SIGTAS</span>
+        <a href="officer-home.html" class="hover:underline">Officer Home</a>
+        <a href="manage-officers.html" class="hover:underline font-bold">Manage Tax Officers</a>
+        <a href="register-officer.html" class="hover:underline">Register Tax Officer</a>
+        <a href="manage-taxpayers.html" class="hover:underline">Manage Taxpayer Users</a>
+        <a href="register-taxpayer.html" class="hover:underline">Register Taxpayer</a>
+        <a href="service-requests.html" class="hover:underline">Service Request Management</a>
+        <a href="officer-messages.html" class="hover:underline">Message Centre</a>
+        <a href="officer-password.html" class="hover:underline">Change Password</a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>English</option>
+          <option>Amharic</option>
+          <option>Other</option>
+        </select>
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>Gregorian</option>
+          <option>Ethiopian</option>
+        </select>
+        <a href="login.html" class="ml-4 bg-red-600 hover:bg-red-700 px-3 py-1 rounded">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-1 container mx-auto px-4 py-8 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6" /></svg>Manage Tax Officers</h2>
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <div class="overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Employee ID</th>
+                <th>Authority</th>
+                <th>Centre</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dereje Alemu</td>
+                <td>EMP123</td>
+                <td>ERCA</td>
+                <td>Addis Ababa</td>
+                <td>Registration</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="space-x-2">
+                  <button class="btn btn-warning btn-xs transition-all duration-200 hover:scale-110">Suspend</button>
+                  <button class="btn btn-outline btn-xs transition-all duration-200 hover:scale-110">Reset Password</button>
+                  <button class="btn btn-info btn-xs transition-all duration-200 hover:scale-110">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mulu Gebre</td>
+                <td>EMP456</td>
+                <td>ERCA</td>
+                <td>Adama</td>
+                <td>Supervisor</td>
+                <td><span class="badge badge-error">Suspended</span></td>
+                <td class="space-x-2">
+                  <button class="btn btn-success btn-xs transition-all duration-200 hover:scale-110">Activate</button>
+                  <button class="btn btn-outline btn-xs transition-all duration-200 hover:scale-110">Reset Password</button>
+                  <button class="btn btn-info btn-xs transition-all duration-200 hover:scale-110">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+    <div class="container mx-auto">
+      &copy; 2024 Ethiopian Revenues and Customs Authority. E-Tax Module for SIGTAS Demo UI.
+    </div>
+  </footer>
+</body>
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Tax Onboarding</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <style>
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
+  <main class="flex-1 container mx-auto px-4 py-12 fade-in flex flex-col items-center justify-center">
+    <img src="https://undraw.co/api/illustrations/undraw_welcome_cats_thqn.svg" alt="Welcome Illustration" class="w-64 mb-8" />
+    <h1 class="text-3xl font-bold mb-4 text-blue-900">Welcome to the E-Tax System!</h1>
+    <p class="text-lg mb-8 text-gray-700 max-w-2xl text-center">E-Tax for SIGTAS is your modern, secure, and user-friendly platform for managing tax declarations, accounts, and services. Whether you are a taxpayer or a tax officer, this guide will help you get started.</p>
+    <div class="card bg-white shadow-xl max-w-2xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-xl mb-4">Getting Started</h2>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Read this onboarding guide to understand the main features.</li>
+          <li>Login as a Taxpayer or Tax Officer using your credentials.</li>
+          <li>Explore your dashboard, manage declarations, view reports, and use the message centre.</li>
+          <li>Access help and support anytime from the navigation bar.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-4 mb-8">
+      <a href="login.html" class="btn btn-primary">Go to Login</a>
+      <a href="taxpayer-home.html" class="btn btn-outline">Taxpayer Demo</a>
+      <a href="officer-home.html" class="btn btn-outline">Officer Demo</a>
+    </div>
+    <img src="https://undraw.co/api/illustrations/undraw_online_information_6pbt.svg" alt="Info Illustration" class="w-48 mt-8" />
+  </main>
+  <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+    <div class="container mx-auto">&copy; 2024 Ethiopian Revenues and Customs Authority. E-Tax Module for SIGTAS Demo UI.</div>
+  </footer>
+</body>
+</html> 

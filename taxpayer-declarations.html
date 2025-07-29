@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Declarations - E-Tax</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <style>
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
+  <nav class="bg-blue-900 text-white shadow">
+    <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <span class="font-bold text-xl tracking-wide">E-Tax for SIGTAS</span>
+        <a href="taxpayer-home.html" class="hover:underline">Home</a>
+        <a href="taxpayer-declarations.html" class="hover:underline font-bold">Tax Declarations</a>
+        <a href="taxpayer-info.html" class="hover:underline">Taxpayer Info</a>
+        <a href="taxpayer-messages.html" class="hover:underline">Message Centre</a>
+        <a href="taxpayer-services.html" class="hover:underline">Taxpayer Services</a>
+        <a href="taxpayer-password.html" class="hover:underline">Change Password</a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>English</option>
+          <option>Amharic</option>
+          <option>Other</option>
+        </select>
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>Gregorian</option>
+          <option>Ethiopian</option>
+        </select>
+        <a href="login.html" class="ml-4 bg-red-600 hover:bg-red-700 px-3 py-1 rounded">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-1 container mx-auto px-4 py-8 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6" /></svg>Tax Declarations</h2>
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <div class="overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr>
+                <th><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6" /></svg>Type</th>
+                <th><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4" /></svg>Period</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VAT Return</td>
+                <td>Q1 2024</td>
+                <td><span class="badge badge-success">Filed</span></td>
+                <td class="space-x-2">
+                  <button class="btn btn-info btn-xs transition-all duration-200 hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>View</button>
+                  <button class="btn btn-outline btn-xs transition-all duration-200 hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>Print</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Income Tax</td>
+                <td>2023</td>
+                <td><span class="badge badge-warning">In Progress</span></td>
+                <td class="space-x-2">
+                  <button class="btn btn-primary btn-xs animate-pulse transition-all duration-200 hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6" /></svg>File Now</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+    <div class="container mx-auto">
+      &copy; 2024 Ethiopian Revenues and Customs Authority. E-Tax Module for SIGTAS Demo UI.
+    </div>
+  </footer>
+</body>
+</html> 

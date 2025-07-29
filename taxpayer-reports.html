@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxpayer Reports - E-Tax</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <style>
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
+  <nav class="bg-blue-900 text-white shadow">
+    <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <span class="font-bold text-xl tracking-wide">E-Tax for SIGTAS</span>
+        <button id="nav-toggle" class="md:hidden ml-2 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-4 absolute md:static top-16 left-0 w-full md:w-auto bg-blue-900 md:bg-transparent z-50">
+          <a href="taxpayer-home.html" class="hover:underline block px-4 py-2 md:p-0">Home</a>
+          <a href="taxpayer-declarations.html" class="hover:underline block px-4 py-2 md:p-0">Tax Declarations</a>
+          <a href="taxpayer-info.html" class="hover:underline block px-4 py-2 md:p-0">Taxpayer Info</a>
+          <a href="taxpayer-messages.html" class="hover:underline block px-4 py-2 md:p-0">Message Centre</a>
+          <a href="taxpayer-services.html" class="hover:underline block px-4 py-2 md:p-0">Taxpayer Services</a>
+          <a href="taxpayer-password.html" class="hover:underline block px-4 py-2 md:p-0">Change Password</a>
+          <a href="onboarding.html" class="hover:underline block px-4 py-2 md:p-0">Onboarding</a>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2 mt-4 md:mt-0">
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>English</option>
+          <option>Amharic</option>
+          <option>Other</option>
+        </select>
+        <select class="rounded px-2 py-1 text-gray-800">
+          <option>Gregorian</option>
+          <option>Ethiopian</option>
+        </select>
+        <a href="login.html" class="ml-4 bg-red-600 hover:bg-red-700 px-3 py-1 rounded">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+  <main class="flex-1 container mx-auto px-4 py-8 fade-in">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
+      <div class="flex items-center gap-4">
+        <h2 class="text-2xl font-semibold">Taxpayer Reports</h2>
+      </div>
+      <a href="onboarding.html" class="btn btn-outline btn-sm">Onboarding Guide</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title mb-2">Total Declarations</h3>
+          <div class="text-3xl font-bold text-blue-900">8</div>
+        </div>
+      </div>
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title mb-2">Total Paid</h3>
+          <div class="text-3xl font-bold text-green-600">ETB 17,000</div>
+        </div>
+      </div>
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title mb-2">Pending Items</h3>
+          <div class="text-3xl font-bold text-yellow-600">2</div>
+        </div>
+      </div>
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title mb-2">Refunds Processed</h3>
+          <div class="text-3xl font-bold text-purple-600">3</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded shadow p-6 mb-8 flex flex-col md:flex-row gap-8 items-center">
+      <div class="flex-1">
+        <h3 class="font-bold mb-2">Tax Payment Trend</h3>
+        <svg width="100%" height="120" viewBox="0 0 300 120">
+          <polyline fill="none" stroke="#2563eb" stroke-width="4" points="0,100 40,80 80,60 120,40 160,60 200,80 240,60 280,40 300,60" />
+          <circle cx="300" cy="60" r="6" fill="#2563eb" />
+        </svg>
+      </div>
+      <div class="flex-1">
+      </div>
+    </div>
+    <div class="card bg-white shadow-xl mb-8">
+      <div class="card-body">
+        <h3 class="card-title mb-4">Recent Activities</h3>
+        <div class="overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Activity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024-04-10</td>
+                <td>Filed VAT Return</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>2024-03-15</td>
+                <td>Requested Tax Clearance</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+              </tr>
+              <tr>
+                <td>2024-03-01</td>
+                <td>Paid Income Tax</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>2024-02-20</td>
+                <td>Filed Excise Tax</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>2024-02-10</td>
+                <td>Requested Refund</td>
+                <td><span class="badge badge-info">In Review</span></td>
+              </tr>
+              <tr>
+                <td>2024-01-15</td>
+                <td>Filed Withholding Tax</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>2023-12-30</td>
+                <td>Paid Penalty</td>
+                <td><span class="badge badge-error">Late</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+    <div class="container mx-auto">&copy; 2024 Ethiopian Revenues and Customs Authority. E-Tax Module for SIGTAS Demo UI.</div>
+  </footer>
+</body>
+</html> 
